@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Archived" representedClassName="Archived" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="notes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TaskData" inverseName="archivedFolder" inverseEntity="TaskData"/>
+    </entity>
+    <entity name="TaskData" representedClassName="TaskData" syncable="YES" codeGenerationType="class">
+        <attribute name="currentdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dayCompleted" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dayRequired" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="taskName" optional="YES" attributeType="String"/>
+        <relationship name="archivedFolder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Archived" inverseName="notes" inverseEntity="Archived"/>
+    </entity>
+    <elements>
+        <element name="TaskData" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Archived" positionX="-54" positionY="27" width="128" height="73"/>
+    </elements>
+</model>
